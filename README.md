@@ -4,8 +4,8 @@
 This project is inspired by the Stack template included in https://github.com/SimulaVR/godot-haskell. This project
 was created primarily as a test for godot-haskell.
 
-# Getting Started
+## Getting Started
 
-# Building
+## Building
 
-# Acknowlegdements
+## Acknowlegdements
