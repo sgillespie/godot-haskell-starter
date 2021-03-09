@@ -12,4 +12,5 @@ result
 # Godot-specific ignores
 export.cfg
 export_presets.cfg
-*.import 
+*.import
+.mono

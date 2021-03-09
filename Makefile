@@ -1,4 +1,4 @@
-NAME = godot-haskell
+NAME = godot-haskell-starter
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)

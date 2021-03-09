@@ -1,0 +1,51 @@
+cabal-version: 3.0
+
+name:           godot-haskell-starter
+version:        0.0.0.0
+description:    Please see the README on Github at <https://github.com/sgillespie/godot-haskell-starter#readme>
+homepage:       https://github.com/sgillespie/godot-haskell-starter#readme
+bug-reports:    https://github.com/sgillespie/godot-haskell-starter/issues
+author:         Sean D Gillespie <sean@mistersg.net>
+maintainer:     Sean D Gillespie <sean@mistersg.net>
+copyright:      Copyright (c) 2021 Sean Gillespie
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/sgillespie/godot-haskell-starter
+
+library
+  exposed-modules: Lib
+  hs-source-dirs: src
+  ghc-options:
+    -Wall
+    -fwarn-unused-do-bind
+    -fwarn-tabs
+    -fwarn-incomplete-uni-patterns
+    -fwarn-incomplete-record-updates
+    -O2
+  build-depends:
+      base >=4.12 && <5,
+      godot-haskell,
+      linear,
+      stm,
+      text,
+      vector
+  default-language: Haskell2010
+
+foreign-library godot-haskell-starter
+  type: native-shared
+  other-modules: FLib
+  hs-source-dirs: ffi/flib
+  c-sources: ffi/cbits/flib.c
+  build-depends:
+      base >= 4.12 && <5,
+      godot-haskell,
+      godot-haskell-starter
+  default-language: Haskell2010
+
